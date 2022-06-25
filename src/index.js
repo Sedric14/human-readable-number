@@ -101,9 +101,6 @@ module.exports = function toReadable(number) {
                     arr[k] = '';
                     arr[i] = 'nineteen';
                     break;
-
-
-
             }
 
         } else {
@@ -141,11 +138,7 @@ module.exports = function toReadable(number) {
                     arr[i] = 'ninety';
                     break;
             }
-
-
         }
-
-
     }
 
     if (arr.length > 2) { arr.splice(-2, 0, 'hundred'); }
@@ -155,28 +148,10 @@ module.exports = function toReadable(number) {
     if (arr.length > 11) { arr.splice(-12, 0, 'hundred'); }
     if (arr.length > 13) { arr.splice(-14, 0, 'thousand'); }
 
-//     const index = arr.indexOf('');
-//     if (index !== -1) {
-//         arr.splice(index, 1);
-//     }
-
-//     const indexZero = arr.indexOf('0');
-//     if (indexZero !== -1) {
-//         arr.splice(indexZero, 1);
-//     }
-
-// arr.forEach((element) => {
-// if (element == '' || element == '0'){
-//     arr.splice(element)
-// }
-// })
-const newArray = arr.filter(function(f) { return f !== '' && f!== '0' })
+newArray = arr.filter(function(f) { return f !== '' && f!== '0' })
 
     let str = newArray.join(' ');
 
     console.log(str);
     return str;
 }
-
-// toReadable(21315767746);
-
